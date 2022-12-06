@@ -63,3 +63,8 @@ fib_full:
     addu $sp $sp 12
 
     jr $ra
+
+exit:
+    li $v0, 10
+    syscall
+    .end main
