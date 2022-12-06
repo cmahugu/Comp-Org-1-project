@@ -23,6 +23,13 @@ else:
     message: .asciiz "Fib worked"
 
 fib_full:
-    li $v0 4
-    la $a0 message
-    syscall
+    # li $v0 4
+    # la $a0 message
+    # syscall
+
+    subu $sp $sp 32
+    sw $ra 4($sp)
+    sw $a0 8($sp)
+    sub $a0 $a0 1
+
+    jal fib
