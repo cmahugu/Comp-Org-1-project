@@ -37,3 +37,6 @@ fib_full:
     sw $v0 0 ($sp)
     sub $a0 $a0 1
     jal fib
+
+    lw $t0 0 ($sp)
+    add $v0 $t0 $v0
