@@ -40,3 +40,9 @@ fib_full:
 
     lw $t0 0 ($sp)
     add $v0 $t0 $v0
+
+    lw $ra 4 ($sp)
+    lw $a0 8 ($sp)
+    addu $sp $sp 12
+
+    jr $ra
