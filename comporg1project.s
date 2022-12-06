@@ -10,6 +10,10 @@ main:
     jal fib
     move $t1 $v0
 
+    move $t1 $v0
+    li $v0 4
+    la $a0 message
+    syscall
     li $v0 1
     move $a0 $t1
     syscall
@@ -27,7 +31,7 @@ else:
 .data
     prompt: .asciiz "Please input a number greater than or equal to 25: "
     errormsg: .asciiz "Illegal number"
-    message: .asciiz "Fib worked"
+    message: .asciiz "Fibonacci number is: "
 
 fib:
     bge $t0 25 fib_full
