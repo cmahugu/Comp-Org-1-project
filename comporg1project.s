@@ -9,6 +9,12 @@ main:
     move $t0 $v0
     jal fib
     move $t1 $v0
+
+    li $v0 1
+    move $a0 $t1
+    syscall
+    #j else
+    jal exit
     
 
 
